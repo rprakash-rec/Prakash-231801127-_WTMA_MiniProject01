@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Details</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Your Signup Information</h1>
+        <table>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Date of Birth</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Phone Number</th>
+                <th>Address</th>
+            </tr>
+            <tr>
+                <td id="firstNameTable"></td>
+                <td id="lastNameTable"></td>
+                <td id="emailTable"></td>
+                <td id="dobTable"></td>
+                <td id="ageTable"></td>
+                <td id="genderTable"></td>
+                <td id="phoneTable"></td>
+                <td id="addressTable"></td>
+            </tr>
+        </table>
+        <a href="FirstPage.html">Go Back</a>
+    </div>
+
+    <script>
+        // Get data from the URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        
+        document.getElementById("firstNameTable").innerText = urlParams.get("firstName");
+        document.getElementById("lastNameTable").innerText = urlParams.get("lastName");
+        document.getElementById("emailTable").innerText = urlParams.get("email");
+        document.getElementById("dobTable").innerText = urlParams.get("dob");
+        document.getElementById("ageTable").innerText = urlParams.get("age");
+        document.getElementById("genderTable").innerText = urlParams.get("gender");
+        document.getElementById("phoneTable").innerText = urlParams.get("phoneNumber");
+        document.getElementById("addressTable").innerText = urlParams.get("address");
+    </script>
+</body>
+</html>
